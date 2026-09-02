@@ -588,7 +588,7 @@
       <button id="nextDay">›</button>
     </div>
     <div class="single-wrap">
-      <div class="day-card today" id="dailyCard"></div>
+      <div id="dailyCardContainer"></div>
     </div>
   </div>
 
@@ -947,7 +947,7 @@
   let currentDay = new Date();
   let currentWeekStart = startOfWeek(new Date());
 
-  const dailyCard = document.getElementById('dailyCard');
+  const dailyCardContainer = document.getElementById('dailyCardContainer');
   const dayLabel = document.getElementById('dayLabel');
   const weekGrid = document.getElementById('weekGrid');
   const weekLabel = document.getElementById('weekLabel');
@@ -955,9 +955,8 @@
   function renderDaily(){
     dayLabel.innerHTML = `${DAY_NAMES[currentDay.getDay()]} <span>${currentDay.getDate()} de ${MONTH_NAMES[currentDay.getMonth()]}, ${currentDay.getFullYear()}</span>`;
     const newCard = buildDayCard(currentDay, { compact:false });
-    dailyCard.replaceWith(newCard);
-    newCard.id = 'dailyCard';
-    document.getElementById('dailyCard').focus;
+    dailyCardContainer.innerHTML = '';
+    dailyCardContainer.appendChild(newCard);
   }
 
   function renderWeekly(){
@@ -1233,6 +1232,9 @@
   renderStats();
 })();
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
