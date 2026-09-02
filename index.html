@@ -225,6 +225,49 @@
     max-width:560px;
   }
 
+  /* daily view gets a noticeably bigger card */
+  #dailyCardContainer .day-card{
+    max-width:680px;
+    min-height:460px;
+    padding:28px 30px 26px;
+  }
+  #dailyCardContainer .card-head{
+    margin-bottom:16px;
+    padding-bottom:14px;
+  }
+  #dailyCardContainer .card-head .name{
+    font-size:22px;
+  }
+  #dailyCardContainer .card-head .badge{
+    font-size:12.5px;
+    padding:3px 12px;
+  }
+  #dailyCardContainer .task-list{
+    gap:11px;
+  }
+  #dailyCardContainer .task-list li{
+    font-size:16px;
+    padding:8px 8px;
+  }
+  #dailyCardContainer .checkbtn{
+    width:24px;height:24px;
+    font-size:13px;
+  }
+  #dailyCardContainer .clock-btn{ font-size:16px; }
+  #dailyCardContainer .hours-badge{ font-size:12.5px; padding:3px 10px; }
+  #dailyCardContainer .del-btn{ font-size:17px; }
+  #dailyCardContainer .empty-hint{ font-size:14.5px; padding:24px 0; }
+  #dailyCardContainer .add-row input{
+    padding:11px 14px;
+    font-size:15px;
+    border-radius:14px;
+  }
+  #dailyCardContainer .add-row button{
+    width:44px;
+    font-size:19px;
+    border-radius:14px;
+  }
+
   /* ---------- week grid ---------- */
   .week-nav{
     display:flex;
@@ -369,10 +412,10 @@
     transition: all .2s ease;
     margin-top:1px;
   }
-  .checkbtn:hover{ border-color:var(--green-deep); }
+  .checkbtn:hover{ border-color:var(--red-berry); }
   li.done .checkbtn{
-    background: linear-gradient(135deg,var(--green-sage),var(--green-deep));
-    border-color:var(--green-deep);
+    background: var(--pink-mid);
+    border-color: var(--pink-mid);
     color:#fff;
   }
   .del-btn{
@@ -1232,9 +1275,6 @@
   renderStats();
 })();
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
